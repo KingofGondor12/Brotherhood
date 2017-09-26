@@ -1,3 +1,4 @@
+require 'highline/import'
 def cls
   system "cls"
 end
@@ -6,7 +7,7 @@ puts "Please Log In"
 puts "Username:"
 @username = $stdin.gets.chomp.to_s
 cls
-puts "Password:"
+ask("Password:\n" ) { |q| q.echo = "x" }
 @password = $stdin.gets.chomp.to_s
 cls
 
